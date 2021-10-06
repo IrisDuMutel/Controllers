@@ -14,7 +14,7 @@ N_sim = 100;
 r = ones(N_sim,1);
 u = 0; %u(k-1)=0
 y = 0;
-r_w = 0.1;
+r_w = 0.2;
 
 for kk=1:N_sim
     DeltaU = inv(Phi_Phi+r_w*eye(Nc))*(Phi_R*r(kk)-Phi_F*Xf)
@@ -38,3 +38,10 @@ subplot(212)
 plot(k,u1)
 xlabel('Sampling Instant')
 legend('Control')
+
+%% Example
+num = [1 -0.1];
+den = conv([1 -0.1],[1 -0.9]);
+sys1 = tf(num,den);
+sys = ss(sys1,'min');
+[Am,Bm,Cm,Dm] = ssdata(sys)

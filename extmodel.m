@@ -85,3 +85,6 @@ Kmpc = Kmpc(1,:)
 eig(A_e-B_e*Kmpc)
 
 
+%% Example 7
+
+
