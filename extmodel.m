@@ -88,3 +88,12 @@ eig(A_e-B_e*Kmpc)
 %% Example 7
 
 
+%%
+J = [8 -3 -3; -3 8 -3; -3 -3 8];
+F = 0.2*eye(3);
+Ap = -J\F;
+Bp = inv(J);
+Cp = eye(3);
+Dp = zeros(3);
+Delta_t = 0.05;
+[Ad,Bd,Cd,Dd] = c2dm(Ap,Bp,Cp,Dp,Delta_t)
