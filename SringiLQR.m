@@ -8,6 +8,5 @@ Q  = [1 0; 0 1]*1;
 Qf = [1 0; 0 1];
 R  = eye(1)*1e-2;
 
-x0 = [0 0]';
 
 % Fooooooorza Iris!
