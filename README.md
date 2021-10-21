@@ -61,6 +61,9 @@ Model of the Devastator obtained from experimental data
 ## References for these models and codes
 
 [1] [Abbeel, P. & UC Berkeley EECS. (n.d.). Optimal Control for Linear Dynamical Systems and Quadratic Cost (“LQR”).](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa12/slides/LQR.pdf)
+
 [2] [Huang, Y. (2020). Model Reduction and Iterative LQR for Control of High-Dimensional Nonlinear Systems.](https://escholarship.org/uc/item/39b4z63z)
+
 [3] [Abbeel, P. & UC Berkeley EECS. (n.d.). Optimal Control for Linear Dynamical Systems and Quadratic Cost (“LQR”).](https://www.cds.caltech.edu/~murray/courses/cds110/wi06/lqr.pdf)
+
 [4] [Model Predictive Control System Design and Implementation Using MATLAB® (Advances in Industrial Control) by Liuping Wang (2010–10-21). (2021). Springer; Softcover reprint of hardcover 1st ed. 2009 edition (2010–10-21).](https://link.springer.com/book/10.1007/978-1-84882-331-0)
