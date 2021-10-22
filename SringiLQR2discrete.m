@@ -3,10 +3,7 @@ b = 3;
 k = 1;
 
 
-% LQR section
-Q  = [1 0; 0 1]*1;
-Qf = [1 0; 0 1];
-R  = eye(1)*1e-2;
+
 
 Ac = [0 1;...
      -k/mass -b/mass];
@@ -19,19 +16,30 @@ Delta_t = 0.01;
 [Ad,Bd,Cd,Dd] = c2dm(Ac,Bc,Cc,Dc,Delta_t)
 
 % MPC gains
-Np = 4;
-Nc = 4;
+Np = 5;
+Nc = 5;
 [Phi_Phi,Phi_F,Phi_R,BarRs,F,Phi,A_e,B_e,C_e] = mpcgains(Ad,Bd,Cd,Nc,Np)
-Su0 = sparse(nbVar*nbData, nbVarPos*(nbData-1));
-	Sx0 = kron(ones(nbData,1), speye(nbVar));
-	M = B;
-	for n=2:nbData
-		id1 = (n-1)*nbVar+1:nbData*nbVar;
-		Sx0(id1,:) = Sx0(id1,:) * A;
-		id1 = (n-1)*nbVar+1:n*nbVar; 
-		id2 = 1:(n-1)*nbVarPos;
-		Su0(id1,id2) = M;
-		M = [A*M(:,1:nbVarPos), M]; 
-	end
-
+[a1,a2] = size(A_e);
+[b1,b2] = size(B_e);
+[c1,c2] = size(C_e);
+Su0 = sparse(a1*Np, Nc*b2);
+Sx0 = kron(ones(Np,1), speye(a1));
+M = B_e;
+id2 = 1;
+% Su0(b1+1:end,:) = Phi;
+for kk = a1+1:a1:Np*a1
+   Sx0(kk:kk+a1-1,:) = Sx0(kk-a1:kk-1,:)*A_e;
+end
+v = Sx0*B_e;
+Su0(:,1:b2) = v;
+for i=b2+1:b2:Nc*b2 
+    Su0(:,i:i+b2-1) = [zeros(i-1,1);v(1:Np*a1-i+1,1)]; %Toeplitz matrix
+end
+Su0 = [zeros(a1,Nc*b2);Su0(1:end-a1,:)];
+Su = full(Su0); Sx = full(Sx0);
 % Fooooooorza Iris!
+
+% LQR section
+Q  = eye(a1*Np)*1;
+Qf = [1 0; 0 1];
+R  = eye(1)*1e-2;

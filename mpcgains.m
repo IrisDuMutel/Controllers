@@ -14,19 +14,19 @@ C_e(:,n1+1:n1+m1) = eye(m1,m1);
 n = n1+m1;
 h(1:m1,:) = C_e;
 F(1:m1,:) = C_e*A_e;
-for kk = m1+1:m1:Np
+for kk = m1+1:m1:Np*m1
     h(kk:kk+m1-1,:) = h(kk-m1:kk-1,:)*A_e;
     F(kk:kk+m1-1,:) = F(kk-m1:kk-1,:)*A_e;
 end
 
 v = h*B_e;
-Phi = zeros(Np,Nc);
-Phi(:,1) = v;
-for i=2:Nc 
-    Phi(:,i) = [zeros(i-1,1);v(1:Np-i+1,1)]; %Toeplitz matrix
+Phi = zeros(Np*m1,Nc*n_in);
+Phi(:,1:n_in) = v;
+for i=n_in+1:n_in:Nc*n_in 
+    Phi(:,i:i+n_in-1) = [zeros(i-1,1);v(1:Np*m1-i+1,1)]; %Toeplitz matrix
 end
 
-BarRs = ones(Np,1);
+BarRs = ones(Np*m1,1);
 Phi_Phi = Phi'*Phi;
 Phi_F = Phi'*F;
 Phi_R = Phi'*BarRs;

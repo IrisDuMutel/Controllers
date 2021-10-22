@@ -48,6 +48,9 @@ R = speye((nbD-1)*nbVarPos) * rfactor; %Control cost matrix
 
 %% Dynamical System settings (discrete version)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+mass = 1;
+b = 3;
+k = 1;
 A1d = zeros(nbDeriv);
 for i=0:nbDeriv-1
 	A1d = A1d + diag(ones(nbDeriv-i,1),i) * dt^i * 1/factorial(i); %Discrete 1D
@@ -56,6 +59,7 @@ B1d = zeros(nbDeriv,1);
 for i=1:nbDeriv
 	B1d(nbDeriv-i+1) = dt^i * 1/factorial(i); %Discrete 1D
 end
+A1d
 A = kron(A1d, speye(nbVarPos)); %Discrete nD
 B = kron(B1d, speye(nbVarPos)); %Discrete nD
 
