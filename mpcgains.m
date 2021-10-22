@@ -12,11 +12,11 @@ C_e = zeros(m1,n1+m1);
 C_e(:,n1+1:n1+m1) = eye(m1,m1);
 
 n = n1+m1;
-h(1,:) = C_e;
-F(1,:) = C_e*A_e;
-for kk = 2:Np
-    h(kk,:) = h(kk-1,:)*A_e;
-    F(kk,:) = F(kk-1,:)*A_e;
+h(1:m1,:) = C_e;
+F(1:m1,:) = C_e*A_e;
+for kk = m1+1:m1:Np
+    h(kk:kk+m1-1,:) = h(kk-m1:kk-1,:)*A_e;
+    F(kk:kk+m1-1,:) = F(kk-m1:kk-1,:)*A_e;
 end
 
 v = h*B_e;
