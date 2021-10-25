@@ -119,7 +119,7 @@ end
 
 %% Plot 2D
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-figure('position',[10 10 800 800]); hold on; axis off;
+figure('position',[10 10 800 800]); hold on; axis on;
 plot(rx(1,:), rx(2,:), '-','linewidth',2,'color',[0 0 0]);
 plot(rx(1,1), rx(2,1), '.','markersize',35,'color',[0 0 0]);
 plot(MuQ0(id0(1,:)), MuQ0(id0(2,:)), '.','markersize',35,'color',[.8 0 0]);
@@ -129,5 +129,5 @@ end
 axis equal; 
 % print('-dpng','graphs/demo_MPC_online01.png');
 
-pause;
-close all;
+% pause;
+% close all;
