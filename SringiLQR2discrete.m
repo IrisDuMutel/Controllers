@@ -3,8 +3,6 @@ b = 0.01;
 k = 0;
 
 
-
-
 Ac = [0 1;...
      -k/mass -b/mass];
 Bc = [0;1];
@@ -47,6 +45,8 @@ Su = full(Su0)
 Sx = full(Sx0)
 size(Su)
 % Fooooooorza Iris!
+
+
 % %Build Su and Sx transfer matrices
 % nbData = 200; %Number of datapoints
 % nbD = 5; %Size of the time window for MPC computation
@@ -74,5 +74,14 @@ size(Su)
 
 
 % LQR section
-Q  = eye(a1*Np)*1e-3;
-R  = eye(1)*1e-3;
+Q0 = zeros(a1*Np);
+nbVarPos = 2; %Dimension of position data (here: x1,x2)
+nbDeriv = 2; %Number of static and dynamic features (nbDeriv=2 for [x,dx] and u=ddx)
+nbVar = nbVarPos * nbDeriv; %Dimension of state vector
+nbData = 5;
+nbPoints=3;
+tl = linspace(1,nbData,nbPoints+1);
+
+
+Q  = eye(a1*Np)*1;
+R  = eye(Nc*2)*1e-8;
