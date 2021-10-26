@@ -20,7 +20,7 @@ x0 = [0 0 0]';
 t_end=90;                               % Max time of simulation [s]
 
 %Fixed step, 0.1, Euler
-out=sim('LinearVehicleLQR', t_end);
+out=sim('NonLinearVehicleiLQR', t_end);
 clc
 
 %%
