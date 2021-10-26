@@ -12,6 +12,7 @@ Implementation of iterative LQR compared with a PID for a mass-damper-spring sys
 Implementation of iterative LQR compared with a PID for a mass-damper-spring system using the equations from [5](https://calinon.ch/papers/Calinon-Lee-learningControl.pdf)
 - [SpringiLQR3discrete.slx](SpringiLQR3discrete.slx) - 
 Implementation of iterative LQR compared with a PID for a mass-damper-spring system using the equations from [2](https://escholarship.org/uc/item/39b4z63z)
+No need of an augmented model. 
 - [SimpleMPC.slx](SimpleMPC.slx) - 
 Attempt to design an MPC for a simple vehicle model (non linear)
 - [SimpleLQR.slx](SimpleLQR.slx) - 
