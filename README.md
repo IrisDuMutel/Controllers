@@ -8,6 +8,10 @@ This model tests the possibility of running a part of the model while the other 
 Model containing an MPC controller for a mass-damper-spring system
 - [SpringiLQR.slx](SpringiLQR.slx) - 
 Implementation of iterative LQR compared with a PID for a mass-damper-spring system
+- [SpringiLQR2discrete.slx](SpringiLQR2discrete.slx) - 
+Implementation of iterative LQR compared with a PID for a mass-damper-spring system using the equations from [5](https://calinon.ch/papers/Calinon-Lee-learningControl.pdf)
+- [SpringiLQR3discrete.slx](SpringiLQR3discrete.slx) - 
+Implementation of iterative LQR compared with a PID for a mass-damper-spring system using the equations from [2](https://escholarship.org/uc/item/39b4z63z)
 - [SimpleMPC.slx](SimpleMPC.slx) - 
 Attempt to design an MPC for a simple vehicle model (non linear)
 - [SimpleLQR.slx](SimpleLQR.slx) - 
@@ -67,3 +71,5 @@ Model of the Devastator obtained from experimental data
 [3] [Abbeel, P. & UC Berkeley EECS. (n.d.). Optimal Control for Linear Dynamical Systems and Quadratic Cost (“LQR”).](https://www.cds.caltech.edu/~murray/courses/cds110/wi06/lqr.pdf)
 
 [4] [Model Predictive Control System Design and Implementation Using MATLAB® (Advances in Industrial Control) by Liuping Wang (2010–10-21). (2021). Springer; Softcover reprint of hardcover 1st ed. 2009 edition (2010–10-21).](https://link.springer.com/book/10.1007/978-1-84882-331-0)
+
+[5] [Calinon, S. and Lee, D. (2019). Learning Control. Vadakkepat, P. and Goswami, A. (eds.). Humanoid Robotics: a Reference, pp. 1261-1312. Springer.](https://calinon.ch/papers/Calinon-Lee-learningControl.pdf)
