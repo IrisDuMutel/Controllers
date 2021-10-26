@@ -85,6 +85,6 @@ D_e = zeros(c1,b2);
 
 % Q  = eye(a1*Np)*1;
 % R  = eye(Nc*2)*1e-8;
-Q  = eye(2)*11;
+Q  = eye(2)*200;
 Qf = eye(2)*10;
-R  = eye(1)*1;
+R  = eye(1)*1e-2;
