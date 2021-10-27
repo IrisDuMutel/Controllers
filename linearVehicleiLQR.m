@@ -1,7 +1,7 @@
 % LQR section
-Q  = eye(3)*1;
-Qf = eye(3);
-R  = eye(2)*10^-2;
+Q  = eye(2)*1;
+Qf = eye(2);
+R  = eye(1)*10^-2;
 Radius = 0.02;
 L = 0.189;
 dt = 0.01;
