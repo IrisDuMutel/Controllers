@@ -7,11 +7,11 @@ This model tests the possibility of running a part of the model while the other 
 - [SpringMPCmimo.slx](SpringMPCmimo.slx) - 
 Model containing an MPC controller for a mass-damper-spring system
 - [SpringiLQR.slx](SpringiLQR.slx) - 
-Implementation of iterative LQR compared with a PID for a mass-damper-spring system
+Implementation of iterative LQR compared with a PID for a mass-damper-spring system using [[1]](https://people.eecs.berkeley.edu/~pabbeel/cs287-fa12/slides/LQR.pdf)
 - [SpringiLQR2discrete.slx](SpringiLQR2discrete.slx) - 
-Implementation of iterative LQR compared with a PID for a mass-damper-spring system using the equations from [5](https://calinon.ch/papers/Calinon-Lee-learningControl.pdf)
+Implementation of iterative LQR compared with a PID for a mass-damper-spring system using the equations from [[5]](https://calinon.ch/papers/Calinon-Lee-learningControl.pdf)
 - [SpringiLQR3discrete.slx](SpringiLQR3discrete.slx) - 
-Implementation of iterative LQR compared with a PID for a mass-damper-spring system using the equations from [2](https://escholarship.org/uc/item/39b4z63z)
+Implementation of iterative LQR compared with a PID for a mass-damper-spring system using the equations from [[2]](https://escholarship.org/uc/item/39b4z63z)
 No need of an augmented model. 
 - [NonLinearVehicleiLQR.slx](NonLinearVehicleiLQR.slx) - 
 Implementation of iterative LQR compared with a PID for a two-wheel robot using the equations from [2](https://escholarship.org/uc/item/39b4z63z)
@@ -77,7 +77,7 @@ Model of the Devastator obtained from experimental data
 
 [2] [Huang, Y. (2020). Model Reduction and Iterative LQR for Control of High-Dimensional Nonlinear Systems.](https://escholarship.org/uc/item/39b4z63z)
 
-[3] [Abbeel, P. & UC Berkeley EECS. (n.d.). Optimal Control for Linear Dynamical Systems and Quadratic Cost (“LQR”).](https://www.cds.caltech.edu/~murray/courses/cds110/wi06/lqr.pdf)
+[3] [Murray, R. M. (2006, January). Lecture 2 – LQR Control. CALIFORNIA INSTITUTE OF TECHNOLOGY Control and Dynamical Systems.](https://www.cds.caltech.edu/~murray/courses/cds110/wi06/lqr.pdf)
 
 [4] [Model Predictive Control System Design and Implementation Using MATLAB® (Advances in Industrial Control) by Liuping Wang (2010–10-21). (2021). Springer; Softcover reprint of hardcover 1st ed. 2009 edition (2010–10-21).](https://link.springer.com/book/10.1007/978-1-84882-331-0)
 
