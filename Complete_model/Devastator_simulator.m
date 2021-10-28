@@ -37,6 +37,14 @@ oy= str2num(x{7});
  Kp_psi=0.4;
  Kd_psi=0;
  Ki_psi=0;
+ 
+ % LQR section
+Q  = 1*[0.1 0; 0 0.01];
+Qf = 1*[1 0; 0 1 ];
+R  = 1*[1e-2 0; 0 1];
+r = 0.02;
+b = 0.189;
+dt = 0.001;
 
 %% Simulation
 t_end=90;                               % Max time of simulation [s]
