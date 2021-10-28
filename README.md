@@ -16,16 +16,21 @@ No need of an augmented model.
 - [NonLinearVehicleiLQR.slx](NonLinearVehicleiLQR.slx) - 
 Implementation of iterative LQR compared with a PID for a two-wheel robot using the equations from [2](https://escholarship.org/uc/item/39b4z63z)
 No need of an augmented model.
-- [SimpleMPC.slx](SimpleMPC.slx) - 
-Attempt to design an MPC for a simple vehicle model (non linear)
+- [LinearVehicleiLQR.slx](LinearVehicleiLQR.slx) - 
+Implementation of iterative LQR compared with a PID for a linear two-wheel robot using the equations from [2](https://escholarship.org/uc/item/39b4z63z)
+NOT WORKING.
 - [SimpleLQR.slx](SimpleLQR.slx) - 
 Attempt to design an LQR for a simple vehicle model (non linear)
+- [LineariLQRmimo.slx](LineariLQRmimo.slx) - 
+iLQR implementation for a linear multiple-input multiple-output system using [[2]](https://escholarship.org/uc/item/39b4z63z)
 - [MRACDevastator.slx](MRACDevastator.slx) - 
 Simple MRAC applied to a simple second order system. To be used for Devastator
 - [MPC.slx](MPC.slx) - 
 Attempt at usign MPC for Desavtator current model
 - [LQR.slx](LQR.slx) - 
 Attempt at usign LQR for Desavtator current model
+- [SimpleMPC.slx](SimpleMPC.slx) - 
+Attempt to design an MPC for a simple vehicle model (non linear)
 - [LinearMPCsiso.slx](LinearMPCsiso.slx) - 
 MPC implementation for a linear single-input single-output system
 - [LinearMPCmimo.slx](LinearMPCmimo.slx) - 
@@ -56,6 +61,13 @@ Some examples from the [book](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&so
 APF trajectory planner from Enza
 - [test123.m](test123.m) -
 A script for thesting SpringiLQR2discrete in an offline mode
+- [lineariLQRmimo.m](lineariLQRmimo.m) - 
+A script for initializing LineariLQRmimo.slx
+- [linearVehicleiLQR.m](linearVehicleiLQR.m) - 
+A script for intitializing LinearVehicleiLQR.slx
+- [NonlinearVehicleiLQR.m](linearVehicleiLQR.m) - 
+A script for intitializing NonLinearVehicleiLQR.slx
+
 ## The MATLAB functions
 - [QPhild.m](QPhild.m) - 
 Tutorial 2.1: Hildreth's Quadratic Programming [book](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwjs-N6VhNvzAhVR6aQKHUMfByIQFnoECAUQAQ&url=https%3A%2F%2Fwww.researchgate.net%2Fprofile%2FMohamed-Mourad-Lafifi%2Fpost%2FWhat_are_the_possible_combination_of_controllers_exists_with_MPCModel_predictive_control%2Fattachment%2F604610505d920200013be2f8%2FAS%253A999053953363973%25401615204432144%2Fdownload%2FModel%2BPredictive%2BContro%2BlSystem%2BDesign%2Band%2BImplementation%2BUsing%2BMATLAB_Wang.pdf&usg=AOvVaw1Xy3A6Az0r0y00ueUBo76M)
