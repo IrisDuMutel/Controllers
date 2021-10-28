@@ -18,7 +18,7 @@ Implementation of iterative LQR compared with a PID for a two-wheel robot using 
 No need of an augmented model.
 - [LinearVehicleiLQR.slx](LinearVehicleiLQR.slx) - 
 Implementation of iterative LQR compared with a PID for a linear two-wheel robot using the equations from [2](https://escholarship.org/uc/item/39b4z63z)
-NOT WORKING.
+Working, but i think the model is wrong
 - [SimpleLQR.slx](SimpleLQR.slx) - 
 Attempt to design an LQR for a simple vehicle model (non linear)
 - [LineariLQRmimo.slx](LineariLQRmimo.slx) - 
