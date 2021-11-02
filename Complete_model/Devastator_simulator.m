@@ -29,7 +29,7 @@ oy= str2num(x{7});
 % ox=5;               % Obstacle X position [m]
 % oy=5;               % Obstacle Y position [m]
 
-%% Controller
+%%Controller
 % PID section
  Kp_Vx=2; 
  Kd_Vx=0;
