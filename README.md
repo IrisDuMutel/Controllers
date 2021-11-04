@@ -37,6 +37,9 @@ MPC implementation for a linear single-input single-output system
 MPC implementation for a linear multiple-input multiple-output system
 - [LinearMPC.slx](Models/LinearMPC.slx) - 
 MPC implementation for a linear single-input single-output system. For equal results run [reced.m](reced.m)
+- [Kalman_filter_conv.slx](Kalman_filter_conv.slx) - 
+A Kalman filter implemented by Enza with a Realsense and an IMU sensor
+
 
 ## The MATLAB scripts
 - [underOsc.m](Scripts/underOsc.m) - 
