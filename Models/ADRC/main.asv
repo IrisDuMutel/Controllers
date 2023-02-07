@@ -1,0 +1,17 @@
+%%% Models based on the examples in:
+%%% A simulative study on active disturbance rejection control (ADRC)
+%%% as a control tool for practitioners
+
+
+%%%% Forst order LADRC siso
+A = [0 1; 0 0];
+b0 = 1;
+B = [b0; 0];
+C = [1 0];
+Kp = 1;
+T = 1;
+L = [1;1];
+x_hat = [0;0];
+d = 0.3;
+S_eso = -Kp/4;
+L = 3*[-2*S_eso; S]
